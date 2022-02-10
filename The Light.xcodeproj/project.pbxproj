@@ -40,7 +40,7 @@
 		8AD89FD427B2EE9600A83C66 = {
 			isa = PBXGroup;
 			children = (
-				8AD89FDF27B2EE9700A83C66 /* The Light */,
+				8AD89FDF27B2EE9700A83C66 /* RainbowLight */,
 				8AD89FDE27B2EE9700A83C66 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8AD89FDF27B2EE9700A83C66 /* The Light */ = {
+		8AD89FDF27B2EE9700A83C66 /* RainbowLight */ = {
 			isa = PBXGroup;
 			children = (
 				8AD89FE027B2EE9700A83C66 /* AppDelegate.swift */,
@@ -64,7 +64,7 @@
 				8AD89FEB27B2EEA300A83C66 /* LaunchScreen.storyboard */,
 				8AD89FEE27B2EEA300A83C66 /* Info.plist */,
 			);
-			path = "The Light";
+			path = RainbowLight;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
