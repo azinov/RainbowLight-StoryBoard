@@ -11,13 +11,40 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Light" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="The_Light__StoryBoard_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXB-J0-e6h">
+                                <rect key="frame" x="142" y="516" width="139" height="275"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <action selector="lightButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EIW-s5-M4g"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="light.max" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="IiF-jD-NEe">
+                                <rect key="frame" x="169" y="461" width="85" height="43"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="IiF-jD-NEe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="414" id="0ne-1Q-WCh"/>
+                            <constraint firstItem="HXB-J0-e6h" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="472" id="9ID-nR-pF7"/>
+                            <constraint firstItem="HXB-J0-e6h" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-71" id="GAg-OY-3wy"/>
+                            <constraint firstItem="IiF-jD-NEe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="169" id="HjC-Pp-974"/>
+                            <constraint firstItem="HXB-J0-e6h" firstAttribute="top" secondItem="IiF-jD-NEe" secondAttribute="bottom" constant="8" id="aGN-Dt-ihv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="IiF-jD-NEe" secondAttribute="trailing" constant="160" id="i6l-gG-O4k"/>
+                            <constraint firstItem="HXB-J0-e6h" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="142" id="lSg-aQ-BxG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HXB-J0-e6h" secondAttribute="trailing" constant="133" id="xav-v5-Pje"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lightButton" destination="HXB-J0-e6h" id="Fnj-ee-2oK"/>
+                        <outlet property="lightMax" destination="IiF-jD-NEe" id="RBI-Od-lRC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -25,6 +52,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="light.max" catalog="system" width="128" height="72"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

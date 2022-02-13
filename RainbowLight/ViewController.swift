@@ -11,54 +11,28 @@ import AVFoundation
 class ViewController: UIViewController {
     
     /// Set the color of view
-    var viewColor = 0
     var colorUI = [UIColor.red, UIColor.orange, UIColor.yellow, UIColor.green, UIColor(red: 128/255, green: 166/255, blue: 255/255, alpha: 1.0), UIColor.blue, UIColor.purple]
+    /// Count of touches
     var touchCount = 1
-    
+    /// State of Light
+    var lightOff = true
+
     /// Hide status bar
     override var prefersStatusBarHidden: Bool {
         return true
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        viewColor = 2
         toggleTorch(on: true, level: 0.1)
+        lightButton.setImage(UIImage(systemName: "flashlight.off.fill"), for: .normal)
+        
+        // Почему-то не скейлит картинку UIImage внутри UIButton, сделал через атрибут инспектор
+        //        lightButton.imageView?.contentMode = .scaleAspectFit
+        
+        lightMax.isHidden = true
     }
         
-    fileprivate func switchUpdateUI() {
-
-        viewColor += 1
-
-        switch viewColor {
-
-        case 1:
-            view.backgroundColor = .red // Красный
-            toggleTorch(on: true, level: 0.1)
-        case 2:
-            view.backgroundColor = .orange // Оранжевый
-            toggleTorch(on: true, level: 0.2)
-        case 3:
-            view.backgroundColor = .yellow // Желтый
-            toggleTorch(on: true, level: 0.3)
-        case 4:
-            view.backgroundColor = .green // Зеленый
-            toggleTorch(on: true, level: 0.4)
-        case 5:
-            view.backgroundColor = UIColor(red: 128/255, green: 166/255, blue: 255/255, alpha: 1.0) // Голубой или .cyan
-            toggleTorch(on: true, level: 0.5)
-        case 6:
-            view.backgroundColor = .blue // Синий
-            toggleTorch(on: true, level: 0.6)
-        default:
-            view.backgroundColor = .purple // Фиолетовый
-            viewColor = 0
-            toggleTorch(on: true, level: 0.7)
-            
-        }
-    }
-    
     // Try to toggle Torch
     fileprivate func toggleTorch(on: Bool, level: Float) {
         guard
@@ -79,9 +53,6 @@ class ViewController: UIViewController {
     // MARK: - Methods
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        // Use switch
-        //        switchUpdateUI()
-        
         // Use array of colorUI
         
         touchCount = touchCount <= colorUI.count-1 ? touchCount : 0
@@ -89,6 +60,27 @@ class ViewController: UIViewController {
         touchCount += 1
         
     }
+    
+    @IBOutlet weak var lightButton: UIButton!
+    
+    @IBOutlet weak var lightMax: UIImageView!
+    
+    
+    @IBAction func lightButtonPressed (_ sender: Any) {
+        
+        if lightOff {
+            lightButton.setImage(UIImage(systemName: "flashlight.on.fill"), for: .normal)
+            toggleTorch(on: true, level: 1)
+        } else {
+            lightButton.setImage(UIImage(systemName: "flashlight.off.fill"), for: .normal)
+            toggleTorch(on: false, level: 0)
+        }
+        
+        lightOff.toggle()
+        lightMax.isHidden.toggle()
+        
+    }
+    
     
 }
 
