@@ -16,7 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8AD89FDD27B2EE9700A83C66 /* The Light (StoryBoard).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "The Light (StoryBoard).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8AD89FDD27B2EE9700A83C66 /* RinbowLight (StoryBoard).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RinbowLight (StoryBoard).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD89FE027B2EE9700A83C66 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8AD89FE227B2EE9700A83C66 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		8AD89FE427B2EE9700A83C66 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
@@ -48,7 +48,7 @@
 		8AD89FDE27B2EE9700A83C66 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				8AD89FDD27B2EE9700A83C66 /* The Light (StoryBoard).app */,
+				8AD89FDD27B2EE9700A83C66 /* RinbowLight (StoryBoard).app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,9 +70,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		8AD89FDC27B2EE9700A83C66 /* The Light (StoryBoard) */ = {
+		8AD89FDC27B2EE9700A83C66 /* RinbowLight (StoryBoard) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8AD89FF127B2EEA300A83C66 /* Build configuration list for PBXNativeTarget "The Light (StoryBoard)" */;
+			buildConfigurationList = 8AD89FF127B2EEA300A83C66 /* Build configuration list for PBXNativeTarget "RinbowLight (StoryBoard)" */;
 			buildPhases = (
 				8AD89FD927B2EE9700A83C66 /* Sources */,
 				8AD89FDA27B2EE9700A83C66 /* Frameworks */,
@@ -82,9 +82,9 @@
 			);
 			dependencies = (
 			);
-			name = "The Light (StoryBoard)";
+			name = "RinbowLight (StoryBoard)";
 			productName = "The Light";
-			productReference = 8AD89FDD27B2EE9700A83C66 /* The Light (StoryBoard).app */;
+			productReference = 8AD89FDD27B2EE9700A83C66 /* RinbowLight (StoryBoard).app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +101,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 8AD89FD827B2EE9700A83C66 /* Build configuration list for PBXProject "The Light (StoryBoard)" */;
+			buildConfigurationList = 8AD89FD827B2EE9700A83C66 /* Build configuration list for PBXProject "RinbowLight (StoryBoard)" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +114,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				8AD89FDC27B2EE9700A83C66 /* The Light (StoryBoard) */,
+				8AD89FDC27B2EE9700A83C66 /* RinbowLight (StoryBoard) */,
 			);
 		};
 /* End PBXProject section */
@@ -322,7 +322,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8AD89FD827B2EE9700A83C66 /* Build configuration list for PBXProject "The Light (StoryBoard)" */ = {
+		8AD89FD827B2EE9700A83C66 /* Build configuration list for PBXProject "RinbowLight (StoryBoard)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8AD89FEF27B2EEA300A83C66 /* Debug */,
@@ -331,7 +331,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8AD89FF127B2EEA300A83C66 /* Build configuration list for PBXNativeTarget "The Light (StoryBoard)" */ = {
+		8AD89FF127B2EEA300A83C66 /* Build configuration list for PBXNativeTarget "RinbowLight (StoryBoard)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8AD89FF227B2EEA300A83C66 /* Debug */,
