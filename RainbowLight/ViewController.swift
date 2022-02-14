@@ -24,7 +24,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        toggleTorch(on: true, level: 0.1)
+        toggleTorch(on: true, lightLevel: 0.1)
         lightButton.setImage(UIImage(systemName: "flashlight.off.fill"), for: .normal)
         
         // Почему-то не скейлит картинку UIImage внутри UIButton, сделал через атрибут инспектор
@@ -34,7 +34,7 @@ class ViewController: UIViewController {
     }
         
     // Try to toggle Torch
-    fileprivate func toggleTorch(on: Bool, level: Float) {
+    fileprivate func toggleTorch(on: Bool, lightLevel: Float) {
         guard
             let device = AVCaptureDevice.default(for: AVMediaType.video),
             device.hasTorch
@@ -43,7 +43,7 @@ class ViewController: UIViewController {
         do {
             try device.lockForConfiguration()
             device.torchMode = on ? .on : .off
-            try device.setTorchModeOn(level: level)
+            try device.setTorchModeOn(level: lightLevel)
             device.unlockForConfiguration()
         } catch {
             print("Torch could not be used")
@@ -70,10 +70,10 @@ class ViewController: UIViewController {
         
         if lightOff {
             lightButton.setImage(UIImage(systemName: "flashlight.on.fill"), for: .normal)
-            toggleTorch(on: true, level: 1)
+            toggleTorch(on: true, lightLevel: 1.0)
         } else {
             lightButton.setImage(UIImage(systemName: "flashlight.off.fill"), for: .normal)
-            toggleTorch(on: false, level: 0)
+            toggleTorch(on: false, lightLevel: 0)
         }
         
         lightOff.toggle()
